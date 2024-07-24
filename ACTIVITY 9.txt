@@ -1,0 +1,42 @@
+ACTIVITY 9
+Step -1 : use git branch command to see which branch you are in  
+> git branch
+Step-2 check the log to get hash and commit message using following command  
+>git log –oneline 
+Step-3: To view the details of a specific commit, including the author, date, and commit message, you can 
+use the git show command 
+>git show <commit_id> 
+Example : >git show 96117fd
+Note : if you want to see only author, date and commit message use the following command 
+$ git log -n 1 <commit-ID> 
+Example : git log -n 1 96117fd 
+Note: if you want to see only commit message the use command  
+> git log --format=%B -n 1 96117fd
+
+ACTIVITY 10
+Step-1 : To list all commits made by the author "JohnDoe" between "2023-01-01" and "2023-12-31," you can use 
+the git log command with the --author and –since and –until option 
+
+> git log --author="JohnDoe" --since="2023-01-01" --until="2023-12-31" 
+To display the last five commits in the repository's history, you can use the git log command 
+with the -n option to limit the number of commits displayed. Here's the command:
+> git log -n 5 
+Note:- If you want a more condensed view, you can use the --oneline option to display each 
+commit on a single line: 
+> git log -n 5 –oneline
+
+ACTIVITY 12
+To undo the changes introduced by a specific commit with the ID "abc123", you can use the "git 
+revert" command. This command creates a new commit that undoes the changes made by the 
+specified commit. 
+>git revert abc123 
+Sometimes It shows message waiting editor to close  
+
+Note : If you want to revert multiple commits, you can specify a range of commits. For example, 
+to revert all commits from "abc123" to "def456", you can use: 
+> git revert abc123..def456 
+Note: Remember that git revert does not remove the original commit from the history; instead, it 
+creates a new commit that undoes the changes introduced by the specified commit. If you want 
+to completely remove a commit from the history, you can use "git rebase" or "git reset", but these 
+commands should be used with caution
+

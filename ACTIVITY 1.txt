@@ -1,0 +1,78 @@
+ACTIVITY 1
+Step-2: To check the version of git installed in your computer use below command 
+>git - -version  
+Step-3 create the folder on any location in your computer  
+>mkdir  sri( sri is your folder name) 
+Step-4 go inside folder using command 
+>cd sri 
+Step-5 make the test folder as your local repository using command 
+>git init 
+Step-6 check status of the git using command 
+>git status
+Step -7 create a text file "test.txt" 
+>echo>test.txt 
+Step-8 write something in a text file using command and open it in notepad and check the content. 
+>echo "my name is srinath">test.txt 
+Step-9: 
+Now check the status of git using command 
+>git status 
+Step-10: 
+Put your files from working area to staging area using command 
+>git add test.txt
+Step-11:  
+To add the file from working directory to local repository use the following command  
+>git commit –m "this is my first commit" 
+
+
+
+activity 2
+Step-1 Create a new branch named "feature-branch" and switch to it using command  
+>git checkout -b feature-branch 
+Step-2 Make your changes and commit them to the "feature-branch". 
+Step-3 To Switch back to the "master" branch use command  
+> git checkout master 
+Step-3 To Merge the changes from "feature-branch" into "master" use command 
+> git merge feature-branch
+
+
+activity 3
+Step-1: Go to the working directory and open the file and see the changes using command 
+> notepad test.txt 
+step 2 check the status of the command
+>git status
+> git stash 
+Note : after this command it will give random stash name/reference 
+(eg:8bebf5a)
+Step 4: To get the stash log use command  
+> git stash list 
+Step 5: to see what is there in the saved stash before applying it back use 
+command 
+>git stash show  
+or to see full detail use command 
+>git stash show –p or (>git stash show stash{2} –p) 
+Step 6: to apply any particular stash and keep the stash entry as it is 
+without deleting it then use command  
+> git stash apply (recent stash is applied) 
+Or 
+>git stash apply stash@{2}
+Note:- use command >git stash pop to take recent stash back to file and 
+delete the saved stash automatically from stash list.
+Note: After applying the stashed changes, you might want to delete the stash 
+entry if you no longer need it then use command  
+> git stash drop 
+Note: if you want to clear entire stash list then use command 
+> git stash clear 
+Note: if you want to create new branch with a stash then use command  
+>git stash branch new_feature stash@{0
+
+
+ACTIVITY 4
+Step-1 To clone a remote Git repository to your local machine, you would typically use the git clone 
+command followed by the URL of the repository you want to clone. 
+> git clone <repository_url> 
+Example :- git clone https://github.com/example/repository.git
+> git clone -b <branch_name> <repository_url> 
+Example: git clone -b development https://github.com/example/repository.git 
+
+
+
